@@ -1,0 +1,30 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<form action="{% url 'editarMensaje' mensaje.id %}" method="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ formulario.as_table }}
+
+        <div class="row gy-2 gx-md-3">
+
+          <div class="form-group col-12">
+            <input type="text" class="form-control" name="asunto" id="asunto" placeholder="Asunto" required>
+          </div>
+          <div class="form-group col-12">
+            <textarea class="form-control" name="mensaje" rows="5" placeholder="Tu Mensaje" required></textarea>
+          </div>
+          <div class="my-3 col-12">
+          </div>
+<br>
+       </div>
+       <button class="btn btn-outline-primary" type="submit">Editar Mensaje</button>
+    </table>
+
+    </form>
+
+{% endblock %}

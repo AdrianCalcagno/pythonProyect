@@ -25,8 +25,15 @@ SECRET_KEY = 'django-insecure-d#i#t%t)=ea4crw7v4b=rctn85drn($+r_x#_t46u$mk%t_57z
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
+MESSAGE_STORAGE = 'django.contrib.messages.storage.cookie.CookieStorage'
 ALLOWED_HOSTS = []
 
+LOGOUT_REDIRECT_URL='/appFamiliares/'
+
+LOGIN_URL='appFamiliares/login/'
+
+MEDIA_URL='/media/'
+MEDIA_ROOT= BASE_DIR / 'media'
 
 # Application definition
 
@@ -38,6 +45,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'appFamiliares',
+    'App2'
 ]
 
 MIDDLEWARE = [
@@ -104,7 +112,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'es-ar'
 
 TIME_ZONE = 'UTC'
 

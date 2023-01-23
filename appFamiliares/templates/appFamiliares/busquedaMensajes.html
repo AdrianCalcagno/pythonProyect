@@ -1,0 +1,22 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<h3> ¡Buscá tu mensaje o el de otro usuario! </h3>
+
+<form action="{% url 'buscar' %}" method="get" class="form-inline my-2 my-lg-0">
+<input class="form-control mr-sm-2" type="text" name="username" placeholder="Ingresa el nombre del usuario" id="username" required>
+<br>
+<button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+
+</form>
+<br>
+
+<h3> ¡Ver todos los mensajes! </h3>
+    <div>
+    <a href="{% url 'leerMensajes'  %}"><button type="submit" class="btn btn-primary">Buscar</button></a>
+    </div>
+
+{% endblock %}

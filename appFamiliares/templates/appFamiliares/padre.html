@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  {% load static %}
+
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>La Scaloneta</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="{% static 'appFamiliares/img/star.ico' %}" rel="icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="{% static 'appFamiliares/vendor/aos/aos.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/bootstrap-icons/bootstrap-icons.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/boxicons/css/boxicons.min.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/glightbox/css/glightbox.min.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/remixicon/remixicon.css' %}" rel="stylesheet">
+  <link href="{% static 'appFamiliares/vendor/swiper/swiper-bundle.min.css' %}" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="{% static 'appFamiliares/css/style.css' %}" rel="stylesheet">
+
+  <!-- Sweet Alert 2
+  <link rel="stylesheet" href="sweetalert2.min.css">-->
+
+   <!-- BOOTSTRAP JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <h1 class="logo"><a href="{% url 'inicio' %}">La Scaloneta</a></h1>
+
+      <nav id="navbar" class="navbar">
+        <ul>
+          {% if user.is_authenticated %}
+          <li class="nav-link scrollto"><strong>{{ user.username }} </strong> </li>
+          <li class="nav-link scrollto"><img style="width: 50px; margin-left: 10px;" src="{{ avatar }}" alt=""></li>
+          <li><a class="nav-link scrollto" href="{% url 'aboutme' %}">About Me</a></li>
+          <li><a class="nav-link scrollto active" href="{% url 'integrantes' %}">Jugadores</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'inbox' %}">Inbox</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'contacto' %}">Dejá tu mensaje</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'busquedaMensajes' %}">Buscá tu mensaje</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'editarPerfil' %}">Mi Perfil</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'logout' %}">Cerrar Sesion</a></li>
+          {% else %}
+          <li class="nav-link scrollto"><strong>¡Hola visitante!</strong></li>
+          <li class="nav-link scrollto"><img style="width: 30px; margin-left: 10px;" src="{{ avatar }}" alt=""></li>
+          <li><a class="nav-link scrollto active" href="{% url 'integrantes' %}">Jugadores</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'aboutme' %}">About Me</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'register' %}">Registro</a></li>
+          <li><a class="nav-link scrollto" href="{% url 'login' %}">Login</a></li>
+          {% endif %}
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+    </div>
+
+  </header><!-- End Header -->
+
+  <br><br><br><br><br>
+{% block contenido_que_cambia %}
+    <div class="container">
+    <h2>¡Bienvenido a la Scaloneta!</h2>
+    <p>En esta página podrás encontrar información sobre los integrantes de la Scaloneta, además de poder dejar tu mensaje para que podamos leerlo.</p>
+
+    <!-- Inicia Carrusel -->
+
+    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="{% static 'appFamiliares/img/team/slide1.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'appFamiliares/img/team/slide2.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+        <div class="carousel-item">
+          <img src="{% static 'appFamiliares/img/team/slide3.jpg' %}" class="d-block w-100" alt="...">
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
+    </div>
+
+     <!-- Finaliza Carrusel -->
+
+    <br><br><br>
+   </div>
+
+   {% endblock %}
+   
+
+
+  <main id="main">
+
+  </main><!-- End #main -->
+
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>La Scaloneta</h3>
+            <p>
+              Directo al Obelisco <br>
+              Argentina<br>
+              Somos Campeones Otra Vez <br><br>
+              <strong>Teléfono:</strong> +1978-1986-2022<br>
+              <strong>Email:</strong> LaScaloneta@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>La Scaloneta</h4>
+            <ul>
+              {% if user.is_authenticated %}
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'integrantes' %}">Jugadores</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'contacto' %}">Dejá tu mensaje</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'busquedaMensajes' %}">Buscá tu mensaje</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'inbox' %}">Inbox</a></li>
+              {% else %}
+              <li><i class="bx bx-chevron-right"></i> <a href="{% url 'integrantes' %}">Jugadores</a></li>
+              {% endif %}
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Titulos Conseguidos</h4>
+            <ul>
+              <li>Copa América 2021<i class="bx"></i>
+              <li>Finalissima 2022<i class="bx"></i>
+              <li>MUNDIAL QATAR 2022<i class="bx"></i>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Unite a nuestro newsletter</h4>
+            <p>Enterate de las principales novedades de nuestra selección</p>
+
+      <form action="{% url 'suscribirse' %}" method="POST" role="form" class=""> {% csrf_token %}
+
+        <table>
+            {{ formulario.as_table }}
+            <input type="email" id="email" name="email" placeholder="Tu mail" required>
+            <input type="submit" value="Suscribirse">
+        </table>
+
+      </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>LaScaloneta</span></strong>. All Rights Reserved
+        </div>
+        <div class="credits">
+          Diseñado por: <a href="">Adrian Calcagno - About me</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-right pt-3 pt-md-0">
+        <a href="https://www.linkedin.com/in/adriancalcagno/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <!-- Vendor JS Files -->
+  <script src="{% static 'appFamiliares/vendor/purecounter/purecounter_vanilla.js' %}"></script>
+  <script src="{% static 'appFamiliares/vendor/aos/aos.js' %}"></script>
+  <script src="{% static 'appFamiliares/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+  <script src="{% static 'appFamiliares/vendor/glightbox/js/glightbox.min.js' %}"></script>
+  <script src="{% static 'appFamiliares/vendor/isotope-layout/isotope.pkgd.min.js' %}"></script>
+  <script src="{% static 'appFamiliares/vendor/swiper/swiper-bundle.min.js' %}"></script>
+
+  <!-- Template Main JS File -->
+  <script src="{% static 'appFamiliares/js/main.js' %}"></script>
+
+  <!-- SweetAlert2 -->
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+ 
+  {% if messages %}
+  {% for m in messages %}
+    <script>
+    Swal.fire({
+      "title": '{% if m.tags == "success" %}Listo{% else %}Error{% endif %}',
+      "text": '{{m}}',
+      "icon":'{% if m.tags == "success" %}success{% else %}error{% endif %}'})
+    </script>
+  {% endfor %}
+{% endif %}
+
+</body>
+
+</html>

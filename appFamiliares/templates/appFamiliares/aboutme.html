@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+
+      {% load static %}
+      
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>CV - Adrián Calcagno</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.1.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="{% static 'appFamiliares/css/styles.css' %}" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Adrián Calcagno</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="{% static 'appFamiliares/img/profile.jpg' %}" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">Sobre Mi</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#aboutScaloneta">Sobre La Scaloneta</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experiencia</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Educación</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Habilidades</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Adrián Ezequiel
+                        <span class="text-primary">Calcagno</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        Morón, Pvcia. de Buenos Aires, Argentina · (011) 15-3041-2408 ·
+                        <a href="mailto:name@email.com">adrianezequielc24@gmail.com</a>
+                    </div>
+                    <p class="lead mb-5">Desde el año 2009 he adquirido conocimientos y experiencia en el ámbito digital, orientado en gran parte al comercio electrónico. Áreas como Informática, Diseño gráfico, Marketing Digital y finalmente programación, la cual afirmo como mi verdadera vocación. Considero que el respeto, la transparencia, perseverancia, una óptima comunicación y organización son bases fundamentales para desarrollarse correctamente.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/adriancalcagno/"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/AdrianCalcagno"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- About-->
+            <section class="resume-section" id="aboutScaloneta">
+              <div class="resume-section-content">
+                  <h1 class="mb-0">
+                      La
+                      <span class="text-primary">Scaloneta</span>
+                  </h1>
+                  <p class="lead mb-5">La Scaloneta es un proyecto que nace en fechas del mundial de Qatar 2022, a raíz de la felicidad que nos produjo al prueblo argentino habernos consagrado como campeones del mundo. No encontré mayor motivación para mi proyecto final del curso de Coderhouse "Python" que nuestra querida selección nacional para demostrar todos los conocimientos adquiridos a lo largo de estos meses de cursada.</p>
+                  <br>
+                  <a href="{% url 'inicio' %}">  <button type="button" class="btn btn-outline-primary">Volver al sitio</button> </a>
+              </div>
+          </section>
+          <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experiencia</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Process Automation Assistant</h3>
+                            <div class="subheading mb-3">Grupo MContigo </div>
+                            <p>Cumplimiento de tareas relacionadas a la automatización de procesos mediante scripts en Python utilizando Deepnote y Make Automation.
+                                Modalidad Part-Time</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2022 - Actualidad</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Analista de Marketing Digital</h3>
+                            <div class="subheading mb-3">Farmacias Estilo Salud</div>
+                            <p>Liderazgo del área de Comercio Electrónico y Marketing Digital. Cumplimiento de objetivos utilizando herramientas como C.R.M, E-mail y WhatsApp Marketing, Social Media Manager, Meta y Google Ads, automatización de procesos. 
+                                Modalidad: Full Time</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Mayo 2021 - Actualidad</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Encargado General</h3>
+                            <div class="subheading mb-3">Acción Gráfica</div>
+                            <p>Encargado general de sucursal, cumpliendo tareas tales como diseño gráfico, servicio técnico de equipos informáticos, atención al cliente, pago a proveedores, gestión de personal.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Mayo 2015 - Diciembre 2021</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Educación</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CODERHOUSE</h3>
+                            <div class="subheading mb-3">Python Developer</div>
+                            <div>Curso: Lenguaje de programación Python + Django</div>
+                            <p>Nota Final: </p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Agosto 2022 - Enero 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CODERHOUSE</h3>
+                            <div class="subheading mb-3">Front End Developer React</div>
+                            <div>Lógica de programación - Desarrollo web (HTML/CSS) - Javascript - React Js - Node Js - Frameworks y Librerías</div>
+                            <p>Promedio: 10</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Enero 2022 - Julio 2022</span></div>
+                    </div>
+                    <br><br>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">CODERHOUSE</h3>
+                            <div class="subheading mb-3">Diplomatura: Marketing Digital</div>
+                            <div>Diplomatura en Marketing Digital (Community Management, Publicidad en Redes Avanzado y Growth Marketing)</div>
+                            <p>Promedio: 9</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Enero 2021 - Diciembre 2022</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Instituto San Pedro</h3>
+                            <div class="subheading mb-3">Tecnicatura en Informática con Orientación Contable.</div>
+                            <div>Secundario técnico orientado en Reperación y Armado de PC y redes informáticas, lógica de la programación, softwares Adobe y Office y principios de la contabilidad.</div>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">Enero 2021 - Diciembre 2022</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading">Programación</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/html-5--v1.png" /> </i></li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/css3.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/javascript--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/react-native.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/nodejs.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/sass.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/npm.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/python--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/django.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/bootstrap.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/sql.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/git.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/github--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/visual-studio-code-2019.png" /> </i> </li>
+                        <p style="font-size: 15px">HTML5, CSS3, Javascript, React Js, Node Js, Sass, Npm, Python, Django, Bootstrap, Sql, Git, Github, Visual Studio Code</p>
+                    </ul>
+                    <div class="subheading">Diseño Gráfico</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/adobe-photoshop.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/adobe-illustrator.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/adobe-premiere-pro.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/adobe-after-effects.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img style="width: 40px" src="https://img.icons8.com/fluency/512/autocad.png" /> </i> </li>
+                        <p style="font-size: 15px"> Adobe Photoshop, Ilustrator, Premiere-Pro, After-Effects y Autocad.</p>
+                    </ul>
+                    <div class="subheading">Marketing Digital</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/google-analytics.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/google-ads.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/facebook-new.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/microsoft-word-2019--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/microsoft-powerpoint-2019--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img src="https://img.icons8.com/color/48/000000/microsoft-access-2019--v1.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img style="width: 110px" src="https://www.embluemail.com/landing/cloud/Resources/images/logo-emblue-header-640w.png" /> </i> </li>
+                        <li class="list-inline-item"> <i> <img style="width: 110px" src="https://static.vecteezy.com/system/resources/previews/007/223/339/original/crm-letter-logo-design-on-white-background-crm-creative-initials-letter-logo-concept-crm-letter-design-vector.jpg" /> </i> </li>
+                        <p style="font-size: 15px">Google Analytics, Ads, Facebook Ads, Microsoft Excel, Word, Powerpoint, Access, E-mail Marketing, CRM</p>
+                    </ul>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="{% static 'appFamiliares/js/scripts.js' %}"></script>
+    </div>
+</html>

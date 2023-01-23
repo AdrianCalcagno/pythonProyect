@@ -1,0 +1,22 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<h3>{{ mensaje }}</h3>
+
+<form action="{% url 'mensajeFormulario' %}" method="POST"> {% csrf_token %}
+
+    <table>
+
+        {{ form.as_table }}
+
+    </table>
+
+    <input type="submit" value="Guardar mensaje">
+
+</form>
+
+
+{% endblock %}

@@ -1,0 +1,32 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<h3 style="color:rgb(53, 157, 243)">{{ mensaje }}</h3>
+<h2>Listado de mensajes</h2>
+
+<ul>
+    {% for mensaje in mensajes %}
+    <div class="row">
+        <div class="col-sm-3 mb-2">
+            <div class="card">
+              <div class="card-body">
+                <p class="card-title"><strong>Usuario: </strong>  {{ mensaje.nombre }}</p>
+                <p class="card-title"><strong>Asunto: </strong>{{ mensaje.asunto }}</p>
+                <p class="card-text"><strong>Mensaje: </strong> {{ mensaje.mensaje }}</p>
+              </strong>
+              </div>
+            </div>
+          </div>
+        </div>
+    {% if mensaje.email == user.email %}
+    <a class="btn btn-danger mb-3" href="{% url 'eliminarMensaje' mensaje.id %}">Borrar</a>
+    {% endif %}
+    {% endfor %}
+
+
+</ul>
+
+{% endblock %}

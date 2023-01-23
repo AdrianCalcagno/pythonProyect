@@ -1,0 +1,85 @@
+{% extends "App2/index.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<!-- ----- Cuerpo ----- -->
+
+<h3>Bienvenido/a a tu casilla de mensajes, {{user}}.</h3>
+
+{% for inbox in inbox %}
+<div class="div_inbox">
+
+    {% for second_user in inbox.canalusuario_set.all %}
+        {% if second_user.usuario == request.user %}
+          {% else %}
+
+        <p>Conversacion con:</p>
+          <a style="margin:0px; display: flex;" href="{% url 'detailms' second_user.usuario.username %}"><p>{{second_user.usuario}} .  -->  .</p>
+            <p style="margin:0px;">  ({{inbox.canalmensaje_set.count}}) mensajes</p>
+          </a>
+
+        {% endif %}
+    {% endfor %}
+
+    {% if inbox.canalmensaje_set.count != 0 %}
+        <div class="div_ms_inbox">
+          {% with ultimo_mensaje=inbox.canalmensaje_set.last %}
+            <p style="margin:0px;">Ultimo mensaje: {{ultimo_mensaje.texto}}</p>
+            <p style="margin:0px;">Enviado por: {% if ultimo_mensaje.usuario == request.user %} <strong> Yo </strong> {% else %} {{ultimo_mensaje.usuario}} {% endif %}</p>
+          {% endwith %}
+        </div>
+
+    {% else %}
+    <p>No hay mensajes nuevos</p>
+    {% endif %}
+  </div>
+    {% empty %}
+    <h2>Inbox Vacio</h2>
+  {% endfor %}
+<br>
+
+<h4>Iniciar conversación</h4>
+
+<form action="{% url 'buscarUsuario' %}" method="get" class="form-inline my-2 my-lg-0">
+  <input class="form-control mr-sm-2" type="text" name="username" placeholder="Ingresa el nombre del usuario" id="username" required>
+  <br>
+  <button class="btn btn-primary my-2 my-sm-0" type="submit">Buscar</button>
+
+  </form>
+
+
+<br>
+<h5>Buscar todos los usuarios:</h5>
+    <div>
+    <a href="{% url 'leerUsuarios'  %}"><button type="submit" class="btn btn-primary">Buscar</button></a>
+    </div>
+
+<!-- ----- Fin del Cuerpo ----- -->
+
+<!-- ----- Estilos ----- -->
+
+<style>
+
+.div_inbox{
+width: 90%;
+margin: 10px auto;
+background-color: white;
+border-radius: 5px;
+border: 1px solid #e6e6e6;
+padding: 5px;
+}
+
+.div_ms_inbox{
+  margin: 0;
+}
+
+</style>
+
+<!-- ----- Fin de Estilos ----- -->
+
+{% endblock %}
+
+</body>
+</html>

@@ -1,0 +1,35 @@
+{% extends "appFamiliares/padre.html" %}
+
+{% load static %}
+
+{% block contenido_que_cambia %}
+
+<h3>{{ mensaje }}</h3>
+
+<h3>{{ user.username }}</h3>
+<p>{{ user.descripcion }}</p>
+<a href="{{user.sitio}}"></a>
+<br>
+
+<form action="{% url 'editarPerfil'  %}" method="POST"> {% csrf_token %}
+
+    <table>
+      {{ form.as_table }}
+    </table>
+
+    <div>
+        <br>
+    <button type="submit" class="btn btn-primary">Modificar Datos</button>
+    </div>
+
+</form>
+
+<br>
+
+<img style="width: 80px; margin-left: 10px;" src="{{ avatar }}" alt="">
+
+<div>
+<a href="{% url 'agregarAvatar'  %}"><button type="submit" class="btn btn-primary">Editar mi avatar</button></a>
+</div>
+
+{% endblock %}
